@@ -1,4 +1,4 @@
-namespace DzCd
+﻿namespace DzCd
 {
     internal static class Program
     {

@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
+            this.GetFilesListButton = new System.Windows.Forms.Button();
             this.RightDataGridView = new System.Windows.Forms.DataGridView();
-            this.序号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.值 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FilesDataGridView = new System.Windows.Forms.DataGridView();
-            this.编号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.时间 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LeftRightSplitContainer = new System.Windows.Forms.SplitContainer();
             this.LeftDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ContrastButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.TotalLable = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ShowDetailCountTextBox = new System.Windows.Forms.TextBox();
             this.MenuContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ToLeftToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToRightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainSplitContainer = new System.Windows.Forms.SplitContainer();
             this.LeftRightContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.CopyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.RightDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FilesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeftRightSplitContainer)).BeginInit();
@@ -69,16 +69,16 @@
             this.LeftRightContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // GetFilesListButton
             // 
-            this.button1.Location = new System.Drawing.Point(13, 10);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 31);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "获取";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.GetFilesListButton.Location = new System.Drawing.Point(13, 10);
+            this.GetFilesListButton.Margin = new System.Windows.Forms.Padding(4);
+            this.GetFilesListButton.Name = "GetFilesListButton";
+            this.GetFilesListButton.Size = new System.Drawing.Size(107, 31);
+            this.GetFilesListButton.TabIndex = 0;
+            this.GetFilesListButton.Text = "获取";
+            this.GetFilesListButton.UseVisualStyleBackColor = true;
+            this.GetFilesListButton.Click += new System.EventHandler(this.GetFilesListButton_Click);
             // 
             // RightDataGridView
             // 
@@ -89,9 +89,9 @@
             this.RightDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.RightDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.RightDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.序号,
-            this.名称,
-            this.值});
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
             this.RightDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RightDataGridView.Location = new System.Drawing.Point(0, 0);
             this.RightDataGridView.Margin = new System.Windows.Forms.Padding(5);
@@ -102,32 +102,14 @@
             this.RightDataGridView.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.LeftRightDataGridView_CellMouseDown);
             this.RightDataGridView.Scroll += new System.Windows.Forms.ScrollEventHandler(this.RightDataGridView_Scroll);
             // 
-            // 序号
-            // 
-            this.序号.HeaderText = "*";
-            this.序号.Name = "序号";
-            this.序号.Width = 43;
-            // 
-            // 名称
-            // 
-            this.名称.HeaderText = "名称";
-            this.名称.Name = "名称";
-            this.名称.Width = 71;
-            // 
-            // 值
-            // 
-            this.值.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.值.HeaderText = "值";
-            this.值.Name = "值";
-            // 
             // FilesDataGridView
             // 
             this.FilesDataGridView.AllowUserToAddRows = false;
             this.FilesDataGridView.AllowUserToDeleteRows = false;
             this.FilesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.FilesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.编号,
-            this.时间});
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
             this.FilesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FilesDataGridView.Location = new System.Drawing.Point(0, 0);
             this.FilesDataGridView.Name = "FilesDataGridView";
@@ -135,21 +117,7 @@
             this.FilesDataGridView.RowTemplate.Height = 25;
             this.FilesDataGridView.Size = new System.Drawing.Size(246, 734);
             this.FilesDataGridView.TabIndex = 2;
-            this.FilesDataGridView.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseDown);
-            // 
-            // 编号
-            // 
-            this.编号.HeaderText = "*";
-            this.编号.Name = "编号";
-            this.编号.ReadOnly = true;
-            this.编号.Width = 50;
-            // 
-            // 时间
-            // 
-            this.时间.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.时间.HeaderText = "时间";
-            this.时间.Name = "时间";
-            this.时间.ReadOnly = true;
+            this.FilesDataGridView.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.FilesDataGridView_CellMouseDown);
             // 
             // LeftRightSplitContainer
             // 
@@ -211,26 +179,26 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.ContrastButton);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.TotalLable);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.ShowDetailCountTextBox);
+            this.panel2.Controls.Add(this.GetFilesListButton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1806, 51);
             this.panel2.TabIndex = 4;
             // 
-            // button2
+            // ContrastButton
             // 
-            this.button2.Location = new System.Drawing.Point(821, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 30);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "对比";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.ContrastButton.Location = new System.Drawing.Point(821, 12);
+            this.ContrastButton.Name = "ContrastButton";
+            this.ContrastButton.Size = new System.Drawing.Size(89, 30);
+            this.ContrastButton.TabIndex = 4;
+            this.ContrastButton.Text = "对比";
+            this.ContrastButton.UseVisualStyleBackColor = true;
+            this.ContrastButton.Click += new System.EventHandler(this.ContrastButton_Click);
             // 
             // label2
             // 
@@ -250,14 +218,14 @@
             this.TotalLable.TabIndex = 2;
             this.TotalLable.Text = "总数";
             // 
-            // textBox1
+            // ShowDetailCountTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(161, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 30);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "50";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ShowDetailCountTextBox.Location = new System.Drawing.Point(161, 11);
+            this.ShowDetailCountTextBox.Name = "ShowDetailCountTextBox";
+            this.ShowDetailCountTextBox.Size = new System.Drawing.Size(100, 30);
+            this.ShowDetailCountTextBox.TabIndex = 1;
+            this.ShowDetailCountTextBox.Text = "50";
+            this.ShowDetailCountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // MenuContextMenuStrip
             // 
@@ -313,6 +281,38 @@
             this.CopyToolStripMenuItem.Text = "复制结果";
             this.CopyToolStripMenuItem.Click += new System.EventHandler(this.CopyToolStripMenuItem_Click);
             // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "*";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 43;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "名称";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 71;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.HeaderText = "值";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "*";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn8.HeaderText = "时间";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
@@ -345,11 +345,11 @@
 
         #endregion
 
-        private Button button1;
+        private Button GetFilesListButton;
         private DataGridView RightDataGridView;
         private DataGridView FilesDataGridView;
         private Panel panel2;
-        private TextBox textBox1;
+        private TextBox ShowDetailCountTextBox;
         private Label label2;
         private Label TotalLable;
         private ContextMenuStrip MenuContextMenuStrip;
@@ -357,17 +357,17 @@
         private ToolStripMenuItem ToRightToolStripMenuItem;
         private DataGridView LeftDataGridView;
         private SplitContainer LeftRightSplitContainer;
-        private DataGridViewTextBoxColumn 序号;
-        private DataGridViewTextBoxColumn 名称;
-        private DataGridViewTextBoxColumn 值;
-        private DataGridViewTextBoxColumn 编号;
-        private DataGridViewTextBoxColumn 时间;
         private SplitContainer MainSplitContainer;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private ContextMenuStrip LeftRightContextMenuStrip;
         private ToolStripMenuItem CopyToolStripMenuItem;
-        private Button button2;
+        private Button ContrastButton;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }
